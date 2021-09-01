@@ -14,16 +14,24 @@
 /* field */
 #field {
     display: flex;
-    width: 1000px;
+    width: 800px;
     margin: auto;
     flex-wrap: wrap;
 }
 
+
 .cell {
+    position: relative;
     background-color: green;
     border: 1px solid;
-    height: 100px;
-    width: 100px;
+    min-width: 80px;
+    flex-grow: 1;    
+}
+
+.cell::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
 }
 
 /* Add properties */
