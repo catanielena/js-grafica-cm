@@ -1,0 +1,32 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* common */
+.wrapper {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+/* field */
+#field {
+    display: flex;
+    width: 1000px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.cell {
+    background-color: green;
+    border: 1px solid;
+    height: 100px;
+    width: 100px;
+}
+
+/* Add properties */
+.bg--red {
+    background-color: red;
+}
