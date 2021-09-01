@@ -35,11 +35,11 @@ function createGrid(cellNumb, getFieldId, cellClass, addClassToCell) {
 ); 
 }
 // Celle per riga
-var userNumb = parseInt(prompt(`Definisci il numero di celle di cui sarà composto il campo da gioco 
+var userNumb = parseInt(prompt(`Definisci il numero di celle per riga di cui sarà composto il campo da gioco 
 (minimo 1, massimo 100)`));
 // Controllo input utente
 while (userNumb<1 || userNumb>100 || isNaN(userNumb)) {
-    userNumb = parseInt(prompt(`Errore! Definisci il numero di celle di cui sarà composto il campo da gioco 
+    userNumb = parseInt(prompt(`Errore! Definisci il numero di celle per riga di cui sarà composto il campo da gioco 
 (minimo 1, massimo 100)`));   
 }
 
