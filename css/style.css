@@ -19,6 +19,10 @@
     flex-wrap: wrap;
 }
 
+.row {
+    width: 100%;
+    display: flex;
+}
 
 .cell {
     position: relative;
@@ -37,4 +41,8 @@
 /* Add properties */
 .bg--red {
     background-color: red;
+}
+
+.display--none {
+    display: none;
 }
