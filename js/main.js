@@ -16,31 +16,42 @@
 // ); 
 // }
 
+// *
+// * Dato l'array e l'elemento da cercare, restituisce true se l'elemento è resente altrimenti false
+// *
+
 
 function createGrid(cellNumb, getFieldId, cellClass, addClassToCell) {
+    var n = 1;
     for (let i = 0; i< cellNumb; i++) {
         for (let j = 1; j<= cellNumb; j++) {        
-            document.getElementsByClassName("row")[i].innerHTML += `<div class=${cellClass}>${i}</div>`;
+            document.getElementsByClassName("row")[i].innerHTML += `<div class=${cellClass}><span>${n}</span></div>`;
+            n++;
         }  
     }   
     
-    for (let k = cellNumb + 1; k <= 10; k++) {
-        document.getElementsByClassName("row")[k].classList.add("display--none");
-    }
     getFieldId.addEventListener("click",
-    function(event) {
-        console.log(event.target.innerHTML);
-        event.target.classList.toggle(addClassToCell);
-    }
-); 
+    function(event) {
+        console.log(event.target.innerHTML);
+        event.target.classList.toggle(addClassToCell);
+    }
+    ); 
+
+    var row = document.getElementsByClassName("row");
+    for (let k = cellNumb; k <= 10; k++) {
+        console.log(row[k]);
+        row[k].style.display = "none";
+    }
 }
+
+
 // Celle per riga
 var userNumb = parseInt(prompt(`Definisci il numero di celle per riga di cui sarà composto il campo da gioco 
-(minimo 1, massimo 100)`));
+(minimo 1, massimo 10)`));
 // Controllo input utente
-while (userNumb<1 || userNumb>100 || isNaN(userNumb)) {
+while (userNumb<1 || userNumb>10 || isNaN(userNumb)) {
     userNumb = parseInt(prompt(`Errore! Definisci il numero di celle per riga di cui sarà composto il campo da gioco 
-(minimo 1, massimo 100)`));   
+(minimo 1, massimo 10)`));   
 }
 
 var fieldId = document.getElementById("field");

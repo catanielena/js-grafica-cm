@@ -14,7 +14,7 @@
 /* field */
 #field {
     display: flex;
-    width: 800px;
+    width: 40%;
     margin: auto;
     flex-wrap: wrap;
 }
@@ -28,7 +28,6 @@
     position: relative;
     background-color: green;
     border: 1px solid;
-    min-width: 80px;
     flex-grow: 1;    
 }
 
@@ -36,6 +35,16 @@
     content: "";
     display: block;
     padding-bottom: 100%;
+}
+
+.cell > span{
+    position: absolute;
+    top: 0;
+    font-size: 3rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 /* Add properties */
