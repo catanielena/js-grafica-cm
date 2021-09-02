@@ -24,6 +24,7 @@
 function createGrid(cellNumb, getFieldId, cellClass, addClassToCell) {
     var n = 1;
     for (let i = 0; i< cellNumb; i++) {
+        getFieldId.innerHTML += `<div class="row"></div>`;
         for (let j = 1; j<= cellNumb; j++) {        
             document.getElementsByClassName("row")[i].innerHTML += `<div class=${cellClass}><span>${n}</span></div>`;
             n++;
