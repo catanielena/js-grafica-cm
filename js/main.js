@@ -37,12 +37,6 @@ function createGrid(cellNumb, getFieldId, cellClass, addClassToCell) {
         event.target.classList.toggle(addClassToCell);
     }
     ); 
-
-    var row = document.getElementsByClassName("row");
-    for (let k = cellNumb; k <= 10; k++) {
-        console.log(row[k]);
-        row[k].style.display = "none";
-    }
 }
 
 
